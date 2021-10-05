@@ -1,0 +1,110 @@
+body {
+    background:#97BACB;;
+    font-family: Ubuntu, sans-serif;
+    color:white;
+    margin:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+.name {
+    font-size:65px;
+    margin:1%;
+    color:white;
+}
+.contname {
+    display:flex;
+    justify-content: flex-end;
+}
+.btn {
+    background: #e6cbb3;
+    border-radius: 11px;
+    border:none;
+    color:white;
+    font-family: Nova Flat;
+    width: 467px;
+    height: 202px;
+    font-size:48px;
+    margin:5%;
+
+}
+.inputbox {
+    width: 406px;
+    height: 209px;
+    background: #C4C4C4;
+    border-radius: 11px ;
+    border:none;
+    text-align:center;
+    outline:none;
+    font-size:48px;
+
+}
+.contmain {
+    height:80%;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    font-family: Nova Flat;
+    margin-top:3%;
+}
+h2 {
+    font-family: Nova Flat;
+    font-size:48px;
+    text-align:center;
+    padding:20px;
+    font-weight:bold;
+}
+.form-check{
+    margin: 2%;
+    font-size: 28px;
+    margin-left: 20%;
+    display: flex;
+    align-items: center;
+}
+input[type='radio']:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+        top: -10px;
+        position: relative;
+        background-color: #d1d3d1;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+    }
+
+input[type='radio']:checked:after {
+        width: 20px;
+        height: 20px;
+        border-radius: 15px;
+        top: -10px;
+        position: relative;
+        background-color:#e3bf9f;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        border: 2px solid white;
+}
+
+.form-check-input{
+    width: 20px;
+    height: 20px;
+}
+.form-check-label {
+    padding-left: 1rem;
+}
+
+/* Tooltip text */
+.alert {
+    color:grey;
+    font-family: Nova Flat;
+    font-weight:bold;
+    background-color:white;
+    font-size:25px;'
+    border-radius: 11px;
+    border:none;
+}
+a {
+   text-decoration: none !important;

@@ -1,0 +1,71 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="{% static 'numtrans/css/stylestransl.css' %}" rel="stylesheet">
+    <title>Перевести число</title>
+  </head>
+  <body>
+  <div class="alert alert-secondary" role="alert">
+    {{ number }}
+  </div>
+  <div class="contname">
+    <a href="{% url 'main' %}" class="btnmanin"> <h1 class="name">Numtrans</h1></a>
+    </div>
+  <form method="POST" action="{% url 'translatenum'%}">
+    {% csrf_token %}
+    <div  class="contmain" >
+      <div class="col" style="align-self: center">
+        <input class="inputbox" type="text" id="number" name="number" placeholder="Введите число" >
+
+      </div>
+        <img src="{% static 'numtrans/pic/line.png' %}" alt="line">
+      <div class="col">
+        <h2>Исходная система счисления</h2>
+        <div class="form-check">
+          <input class="form-check-input" value="2" type="radio" name="from" id="fromtwo">
+            <label class="form-check-label" for="fromtwo">Двоичная</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" value="10" type="radio" name="from" id="fromten" checked>
+        <label class="form-check-label" for="fromten">Десятичная</label>
+      </div>
+        <div class="form-check">
+        <input class="form-check-input" value="16" type="radio" name="from" id="fromsix">
+        <label class="form-check-label" for="fromsix">Шестнадцаричная</label>
+      </div>
+      </div>
+        <img src="{% static 'numtrans/pic/line.png' %}" alt="line"  >
+      <div class="col">
+        <h2>Выходная система счисления</h2>
+        <div class="form-check">
+          <input class="form-check-input" value="2" type="radio" name="to" id="totwo">
+            <label class="form-check-label" for="totwo">Двоичная</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" value="10" type="radio" name="to" id="toten" checked>
+        <label class="form-check-label" for="toten">Десятичная</label>
+      </div>
+        <div class="form-check">
+        <input class="form-check-input" value="16" type="radio" name="to" id="tosix">
+        <label class="form-check-label" for="tosix">Шестнадцаричная</label>
+      </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+     <button type="submit" class="btn btn-light" data-toggle="popover" title="Результат вычисления" data-content="{{number}}">Перевести</button>
+    </div>
+    </form>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+body {
+    background:#FFFAF5;
+    display:flex;
+    justify-content:center;
+}
+.text {
+    color:white;
+    background-color:#e6cbb3;
+    padding:100px;
+    margin:100px;
+    border-radius: 11px ;
+    border:none;
+}
+h1 {
+    font-size:100px;
+    font-weight: bold;
+    margin-left:5%;
+
+}
+
+.contmain {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+pre {
+    font-family: Nova Flat;
+    font-weight:bold;
+    font-size: 30px;
+    margin-top:5%;
+    width:100%;
+}
+img {
+    margin:2%;
+}
